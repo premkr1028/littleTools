@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>registration page</title>
+  <link href="../registration.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap');
+  </style>
+</head>
+<body>
+<div class="regCont w-screeen min-h-screen flex bg-pink-200">
+  <div class="logLeft w-[50%] relative ">
+    <h2 class="logo rotate-[-6deg] text-3xl font-bold absolute top-[10px] left-[10px] text-white ">
+      Little Tools
+    </h2>
+   <!-- <img class="h-full"src="https://i.pinimg.com/originals/bb/00/1b/bb001b2f7a72073e6308ee2e15a80701.gif"/> -->
+  </div>
+  <div class="right w-[50%] flex flex-col p-4 gap-8 bg-white items-center">
+  <div class="signInbtns flex flex-col  w-[80%] items-center gap-[1.2vw] mt-[12px]">
+    <button class="google text-sm font-bold"><a href="">
+      Sign in with google
+    </a></button>
+    <div class="line w-full flex items-center gap-2 justify-center">
+      <div class="ll w-[95px] h-[0.5px] bg-gray-500"></div>
+      <p class="text-xs text-gray-500 font-thin text-center">or sign in with email</p>
+      <div class="rl w-[95px] h-[0.5px] bg-gray-500"></div>
+    </div>
+    <form class="logInInputs w-full flex flex-col gap-2 items-start mt-[15px]">
+      <label for="userInput" class="font-bold text-normal">Username or Email</label>
+      <input type="text" name="userInput"  class="p-2"  />
+      <label for="passInput" class="font-bold text-normal">Password</label>
+      <input type="password" name="passInput" class="p-2" />
+      <a href="" class="text-sm underline ">Forgot?</a>
+      <button class="text-sm font-bold bg-black text-white">SIgn In</button>
+    </form>
+    <p class="text-sm text-center text-gray-500 mt-[12px]">Don't have an account?<a href="signUp.html" class="underline"> Sign up</a></p>
+  </div>
+  
+</div>
+</body>
+</html>

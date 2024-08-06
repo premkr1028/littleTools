@@ -1,0 +1,64 @@
+#saveBtn{
+  transition: 0.2s;
+  opacity: 0.5;
+  pointer-events: none;
+}
+#fileName , #selectType, #saveBtn{
+  height: 40px !important;
+
+}
+#saveBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover{
+  transform: scale(0.99);
+}
+button:active{
+background-color: lightblue;
+}
+
+#text-area:valid ~ #saveBtn{
+  opacity: 1;
+  pointer-events: auto;
+  
+}
+
+
+@media(max-width:640px){
+  .texttofileCont{
+    width: 95vw !important;
+    
+  }
+  textarea{
+    width: 95% !important;
+    margin-left: 2.5% !important;
+    font-size: 18px !important;
+    height: 30vh !important;
+  }
+  label{
+    font-size: 16px !important;
+    margin-left: 3px;
+  }
+  #fileName , #selectType{
+    height: 40px !important;
+    font-size: 15px !important;
+    width: 90%;
+  }
+  #selectType{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    font-size: 18px !important;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .selec, .inpu{
+    width: 50%;
+  }
+}

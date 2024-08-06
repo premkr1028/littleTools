@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+span{
+  overflow: hidden;
+}
+span>p{
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-size: 5vw;
+  /* background-color: yellow; */
+  transform: translateY(100%);
+  padding: 0 !important;
+  margin: 0 !important;
+
+}
+
+span h2{
+  opacity: 0;
+}
+/* @keyframes textRveals{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+} */
+/* .nameReveal:nth-child(1){
+ color: red;
+} */
+
+.char{
+  transform: translateY(100%);
+}
+
+.word{
+  overflow: hidden;
+}
+.aboutSection{
+  position: relative;
+}
+.mb{
+  object-fit: top;
+}
+.mb img{
+  object-fit: cover;
+  object-position: bottom;
+  height: 19px;
+  position: absolute;
+  bottom: 0;
+}
+
+
+@media (max-width: 640px){
+  .revealIntroText{
+    flex-direction: column;
+    margin-top:10px !important;
+    align-items: center !important;
+    gap: 5vh;
+  }
+  span p{
+    /* width: full; */
+    font-size: 13vw;
+  }
+
+  span h2{
+    font-size: 7vw !important;
+  }
+  .aboutSection p, .tipni{
+    font-size: 3vw ;
+    width: 70%;
+  }
+ 
+  .aboutSection .mb{
+    height: 25vw;
+  }
+  .aboutSection .mb img{
+    height: 100%;
+  }
+  
+}

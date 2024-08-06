@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.fa-magnifying-glass {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.8vw;
+}
+
+i {
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+
+
+
+
+.wrapper {
+  width: 100vw;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+
+.stats {
+  text-wrap: nowrap;
+}
+
+.allTools {
+  width: 95%;
+  display: grid;
+}
+
+.allTools .toolDiv {
+  margin-bottom: 15px;
+  width: 25vw;
+  height: 35vh;
+  border-radius: 3px;
+  overflow: hidden;
+
+}
+
+.toolDiv img {
+  object-fit: cover;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  position: absolute;
+  outline: 0;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 .5em;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.wrapper .filter {
+  left: 0 !important;
+  position: absolute;
+  width: max-content;
+  height: max-content;
+}
+
+.menuBtn{
+  mix-blend-mode:multiply;
+}
+.toolDiv{
+  transition: 0.2s;
+}
+.toolDiv:hover{
+  scale: 1.05;
+}
+
+
+summary {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+details {
+  width:3vw;
+  height: 3vw;
+  position: relative;
+}
+
+details ul {
+  width: 12vw;
+  border: 1px solid gray;
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+  color: #454545;
+  bottom: 100%;
+  right: 0%;
+  gap: 0.6vh;
+  padding: 0.5vw;
+}
+
+details ul li {
+  padding: 2vh 2vw;
+  width: 100%; 
+  font-size: 1vw;
+  gap: 1vw;
+  border-radius: 5px;
+  text-wrap: nowrap;
+  transition: 0.2s;
+}
+details ul li:hover{
+  opacity: 1;
+  background-color: #F5F5F5;
+}
+
+
+@media (max-width: 640px){
+  .toolDiv{
+    width: 90% !important;
+    height: 35vh !important;
+    /* background-color: red; */
+  }
+  .toolDiv .img{
+    height: 70% ;
+  }
+   .toolDiv .stats{
+     height: 30%;
+     display: flex;
+     align-items: start;
+   }
+  .filter{
+    width: 30vw !important;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .filter i{
+  font-size: 4vw;
+  }
+  .filter label{
+    font-size: 5vw;
+    font-family: 'Playfair Display', serif;
+  }
+
+  
+}

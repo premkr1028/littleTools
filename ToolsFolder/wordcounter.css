@@ -1,0 +1,16 @@
+@media (max-width:640px){
+  .cont{
+    margin-top: 90px !important;
+  }
+  .box{
+    width: 95%;
+    height: max-content;
+    /* background-color: red !important; */
+  }
+  .box textarea{
+    width: 95%;
+    height: 35vh;
+    margin-left:2.5% !important;
+    outline: gray;
+  }
+}

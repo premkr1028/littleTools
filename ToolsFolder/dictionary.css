@@ -1,0 +1,23 @@
+.title{
+  font-family: Kanit;
+}
+.si{
+  transition: 0.3s;
+}
+.si:hover{
+  background-color: lightgray;
+}
+.si:hover img{
+  transform: scale(0.9);
+}
+
+.si{
+  top: 50%;
+  transform:translateY(-50%);
+}
+
+@media(max-width:640px){
+  input[type = text]{
+    width: 80vw !important;
+  }
+}

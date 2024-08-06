@@ -1,0 +1,185 @@
+.active {
+  background-color: lightblue;
+}
+
+.bmiCont .nav ul li {
+  height: 100%;
+  width: 50%;
+  display: grid;
+
+  place-items: center;
+  border: 1px solid black;
+}
+
+
+
+input[type=number] {
+  width: 150px;
+  border: 1px solid gray;
+  outline: none;
+  padding: 1px 3px;
+  height: 26px;
+  font-size: 1.8vw;
+}
+
+label {
+  font-weight: 600;
+  font-size: 2.5vw;
+}
+
+.input2 input {
+  width: 80px;
+}
+
+.unit {
+  position: absolute;
+  font-size: 2.5vw;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.unit.cm {
+  position: absolute;
+  right: 3%;
+}
+
+.unit.kg {
+  position: absolute;
+  right: 3%;
+}
+
+.unit.inc {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.unit.feet {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.unit.pound {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.calculate {
+  align-content: center;
+  margin: 0 auto;
+  transition: 0.2s;
+}
+
+button {
+  transition: 0.2s;
+  height: 30px;
+}
+
+button:hover {
+  scale: 0.9;
+}
+
+button:active {
+  background-color: lightgreen;
+}
+
+p {
+  font-size: 2vw;
+}
+
+.abBaneer {
+  display: none;
+}
+
+.about:hover {
+  scale: 1.2;
+}
+
+.about:hover .abBaneer {
+  display: flex;
+}
+
+.usHeight input {
+  width: 100px;
+}
+
+.container {
+  height: max-content;
+}
+
+@media(max-width:640px) {
+  input[type=text] {
+    height: 40px !important;
+  }
+
+  label,
+  button {
+    font-size: 15px !important;
+  }
+
+  .input2 {
+    flex-direction: column;
+  }
+  #outAns{
+    font-size: 15px;
+  }
+  input[type = number]{
+    font-size: 14px;
+  }
+  .bmiCont{
+    width: 80% !important;
+  }
+  table{
+    width: 80% !important;
+  }
+}
+
+
+
+
+
+
+/* .p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px; */
+/* } */
+
+
+
+/* spacing */
+
+table {
+  margin-top: 10px;
+  table-layout: fixed;
+  width: 500px;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+/* table tbody:nth-child(1) {
+  background-color: black;
+} */
+
+
+
+th,
+td {
+  padding: 8px;
+}
+td{
+  border-bottom: 0.3px solid black;
+}
+
+/* .bmiDets h1{
+  text-align: start !important;
+} */
+
+#bmiCat{
+  font-family: 'Poppins';
+  font-weight: 600;
+  -webkit-text-stroke: 0.5px rgba(0,0,0,0.6);;
+  /* -webkit-text-stroke-width: 1px navy !important; */
+}

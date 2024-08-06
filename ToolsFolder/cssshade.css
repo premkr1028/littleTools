@@ -1,0 +1,162 @@
+.shadeSearch input {
+  border-radius: 4px;
+  font-size: 2.2vw;
+  border: 1px solid gray;
+  outline: none;
+  height: 40px;
+}
+
+.searchList {
+  top: 108px !important;
+}
+
+.shadeSearch button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid gray;
+  font-size: 2.2vw;
+  transition: 0.2s;
+}
+
+.shadeSearch button:hover {
+  opacity: 0.8;
+}
+
+.shadeSearch button:active {
+  background-color: lightblue;
+  font-size: 2vw;
+}
+
+.color-box {
+  width: 220px;
+  height: 120px;
+  border: 1px solid gray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+
+}
+
+.cp svg {
+  transition: 0.2s;
+  /* background-color: red; */
+  pointer-events: none;
+}
+
+/* .cp:hover{
+  background-color: lightgray;
+} */
+.cp:hover svg {
+  opacity: 0.4;
+}
+
+.cp svg {
+  height: 40%;
+  cursor: pointer;
+}
+
+.color p {
+  transition: 0.2s;
+}
+
+.shadeSearch .searchList {
+  width: 59%;
+  min-height: max-content;
+  background-color: white;
+}
+
+.src {
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.src:hover {
+  opacity: 0.7;
+  scale: 1.2;
+}
+
+.listItems {
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.listItems:hover {
+  scale: 1.04;
+  background-color: lightgray;
+  border: 0.5px gray;
+  border-radius: 8px;
+}
+
+.color-box {
+  transition: 0.3s;
+}
+
+.color-box:hover {
+  scale: 1.02;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.head {
+  font-family: Bebas Neue;
+  letter-spacing: 5px;
+  /* margin-top: 6vh; */
+  text-decoration: underline;
+  font-size: 30px;
+  /* -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white; */
+}
+
+#moreShadesBtn:active {
+  background-color: lightgray;
+}
+
+@media (max-width:640px) {
+  .head {
+    font-size: 20px !important;
+  }
+
+  .innerCpoyText {
+    font-size: 14px !important;
+  }
+
+  .shadeSearch div {
+    width: 90% !important;
+  }
+
+  input[type=text] {
+    height: 40px !important;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .color-box {
+    width: 45vw;
+  }
+
+  .color-name-or-cp .name {
+    font-size: 15px;
+  }
+
+  .color-name-or-cp .cp {
+    scale: 1.4;
+  }
+
+  #moreShadesBtn {
+    font-size: 18px;
+  }
+
+  #searched_shade_name {
+    font-size: 15px;
+  }
+}
+
+#moreShadesBtn {
+  transition: 0.3s;
+}
+
+#moreShadesBtn:hover {
+  scale: 1.03;
+  opacity: 0.7;
+}

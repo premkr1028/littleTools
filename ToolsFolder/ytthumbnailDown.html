@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ytthumbnailDown</title>
+
+  <link href="foreverypage.css" rel="stylesheet" type="text/css" />
+  <link href="tools.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes shake {
+      0% {
+        margin-left: 0rem;
+      }
+
+      25% {
+        margin-left: 0.5rem;
+      }
+
+      75% {
+        margin-left: -0.5rem;
+      }
+
+      100% {
+        margin-left: 0rem;
+      }
+    }
+
+    .invalid {
+      border: 1px solid red;
+      border-radius: 1px 2px 3px rgba(255, 0, 0, 0.5);
+    }
+
+    .shake {
+      animation: shake 0.2s ease-in-out 0s 2;
+
+    }
+
+    .placeColor::-webkit-input-placeholder {
+      color: red;
+    }
+
+    @media(max-width: 640px) {
+      .cont {
+        width: 95vw;
+      }
+
+      .cont .img {
+        width: 99% !important;
+        object-fit: cover;
+        /* height: max-content !important; */
+      }
+
+      .cont .img img {
+        height: max-content;
+        /* width: max-content !important; */
+        object-fit: cover;
+      }
+
+      .getBtn {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap');
+  </style>
+  <script src="https://kit.fontawesome.com/a4c65e8a71.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container w-screen">
+    <div class="main page1 w-screen min-h-screen relative flex flex-col items-center ">
+      <nav class="w-screen px-[6vw] py-[2vh] flex justify-between items-center  top-0 z-50">
+        <ul class="flex gap-[2vw] w-[30%] text-[1.4vw] font-bold capitalize">
+          <li><a href="/">home</a></li>
+          <li><a href="/Pages/aboutPage/about.html">about</a></li>
+          <li class="flex jusify-center items-center "><a href="/Pages/contactPage/contactus.html" class="flex jusify-center items-center"></a> <img
+              class="w-[6px] h-[5px] ml-1" src="https://cdn-icons-png.flaticon.com/512/60/60995.png" /></li>
+
+
+          </li>
+
+
+        </ul>
+        <div class="menubarNav">
+          <div class="menuLine w-[15px]" id="mL1"></div>
+          <div class="menuLine w-[12px]" id="mL2"></div>
+          <div class="menuLine w-[9px]" id="mL3"></div>
+        </div>
+        <div class="logo w-[30%] flex justify-center items-center">
+          <a href="/">
+            <h2 class="text-[3.8vw] rotate-[-6deg] text-blue-500 font-medium">Little tools</h2>
+          </a>
+        </div>
+        <div class="sideItems flex w-[30%] justify-end items-center gap-[2vw]">
+          <div class="search w-[22px]">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" viewBox="0 0 50 50">
+              <path
+                d="M 21 3 C 11.654545 3 4 10.654545 4 20 C 4 29.345455 11.654545 37 21 37 C 24.701287 37 28.127393 35.786719 30.927734 33.755859 L 44.085938 46.914062 L 46.914062 44.085938 L 33.875 31.046875 C 36.43682 28.068316 38 24.210207 38 20 C 38 10.654545 30.345455 3 21 3 z M 21 5 C 29.254545 5 36 11.745455 36 20 C 36 28.254545 29.254545 35 21 35 C 12.745455 35 6 28.254545 6 20 C 6 11.745455 12.745455 5 21 5 z">
+              </path>
+            </svg>
+          </div>
+          <div class="fav w-[22px]">
+            <a href="/Pages/favouriteToolsPage/favTools.html">
+              <img class='w-full' src="../icons8-heart-50.png" alt="favTools">
+            </a>
+          </div>
+          <div class="acc w-[22px]">
+            <a href="registration/signUp.html">
+              <img src="../contact.png" class="w-full" alt="create account">
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="searchKabox bg-relative">
+
+        <div class="searchBacklay fixed w-screen h-screen top-0 left-0 z-10 bg-black/50 hidden"></div>
+        <div class="ser">
+          <input class="searchBar text-sm " type='text' placeholder="Search Tools" onfocus="searchListAaja()"
+            oninput="searchHist()" onblur="searchChalaJa()" />
+          <button
+            class="searchMeJaa w-[5vw] h-[8vh] fixed top-[15.8vh] left-[85vw] z-50 border-l-2 hidden flex justify-center items-center  duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" height="90%" viewBox="0 0 50 50">
+              <path
+                d="M 21 3 C 11.654545 3 4 10.654545 4 20 C 4 29.345455 11.654545 37 21 37 C 24.701287 37 28.127393 35.786719 30.927734 33.755859 L 44.085938 46.914062 L 46.914062 44.085938 L 33.875 31.046875 C 36.43682 28.068316 38 24.210207 38 20 C 38 10.654545 30.345455 3 21 3 z M 21 5 C 29.254545 5 36 11.745455 36 20 C 36 28.254545 29.254545 35 21 35 C 12.745455 35 6 28.254545 6 20 C 6 11.745455 12.745455 5 21 5 z">
+              </path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="searchList  justify-center flex-col">
+          No search item
+        </div>
+      </div>
+      <p class="menuBtn fixed top-3 right-[-34vw] z-50 text-[1.2vw] font-bold text-black cursor-pointer">MENU</p>
+      <p
+        class=" searchFixBtn fixed top-3 searchFixBtnText right-[-15vw] z-50 text-[1.2vw] font-bold text-black cursor-pointer">
+        SEARCH TOOLS</p>
+      <p
+        class="searchFixBtn searchFixBtnIco fixed top-3 right-[-35vw] z-50 text-[1.2vw] font-bold text-black cursor-pointer border border-2  hidden">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </p>
+      <div
+        class="menuLay w-0 h-screen fixed top-0 right-0 z-50 flex flex-col justify-center items-center gap-[4vh] text-center hidden">
+        <div class="closeMenu absolute h-[20px] top-[2vh] right-[2vh] flex flex-col overflow-hidden">
+          <h1 class="clo opacity-0 top-[100%]">close</h1>
+          <h1>close</h1>
+        </div>
+
+
+        <span><a href="/">HOME</a></span>
+        <span><a href="/Pages/favouriteToolsPage/favTools.html">FAVOURITES-TOOLS</a></span>
+        <span><a href="/Pages/allToolsPage/allTools.html">ALL-TOOLS</a></span>
+        <span><a href="/Pages/aboutPage/about.html">ABOUT</a></span>
+        <span><a href="/Pages/contactPage/contactus.html" class="cu">CONTACT-US</a></span>
+        <ul id="socialLinks" class="flex gap-[4vw]">
+          <li><a
+              href="https://www.linkedin.com/in/prem-kumar-balmiki-824a26311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              <i class="text-[20px] fa-brands fa-linkedin"></i>
+            </a></li>
+          <li><a href="https://www.instagram.com/hir.2810_/">
+              <i class="text-[20px] fa-brands fa-instagram"></i>
+            </a></li>
+          <li><a href="https://x.com/premkrbalmiki?s=09">
+              <i class="text-[20px] fa-brands fa-twitter"></i>
+            </a></li>
+        </ul>
+      </div>
+      <!-- imgtopdf start-->
+      <h2 class="text-center text-xl font-semibold ">Youtube thumbnail Download!</h2>
+      <p class="text-center px-4 mt-4">
+        Want to download youtube thumbnail? This is the tool for you!
+      </p>
+      <!-- <p  class="text-center px-4 mt-4">
+            just paste the youtube video link and click on generate button!
+          </p> -->
+      <div class="cont px-4 py-2 bg-red-500 rounded-md mt-4 flex flex-col items-center">
+        <div class="get flex mb-3">
+          <input type="text" placeholder="Enter the youtube video link" class="w-full rounded-md p-2 outline-none "
+            id="linkInput" />
+          <button
+            class="getBtn bg-green-600 rounded-md p-2 w-[12vw] text-white  font-semibold hover:bg-green-500 duration-100"
+            id="getBtn">Get</button>
+        </div>
+        <div class="img flex justify-center items-center w-[320px] h-[max-content] bg-black">
+
+        </div>
+        <div class="flex w-full justify-between items-center px-[2vw] py-[2vh]">
+          <select class="bg-white rounded h-[40px] outline-none hover:bg-gray-300 duration-200" name="chooseQuaility"
+            id="chooseQuaility">
+            <option value="maxresdefault">Full HD</option>
+            <option value="hqdefault">
+              Medium
+            </option>
+            <option value="mqdefault">
+              Low
+            </option>
+          </select>
+          <button id="downBtn"
+            class="bg-green-600 rounded-md p-2  text-white  font-semibold hover:bg-green-400 duration-100 h-[40px]]"
+            onclick="downloadThumbnail()">
+            Download
+          </button>
+        </div>
+
+      </div>
+
+
+
+
+      <footer class="px-4 py-3 w-screen h-[80px] relative">
+        <div class="upFoot flex gap-[4vw] justify-between ">
+          <div class="leftUpFoot ml-1">
+            <ul class="flex gap-[1.5vw]">
+
+              <li><a href="/Pages/allToolsPage/allTools.html" class="font-semibold">Tools</a></li>
+            </ul>
+          </div>
+          <div class="sc flex h-[15px] gap-[2vw] mr-1">
+            <a
+              href="https://www.linkedin.com/in/prem-kumar-balmiki-824a26311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/hir.2810_/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/premkrbalmiki?s=09"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <!-- <div class="footLine"></div> -->
+        <div class="down relative bottom-0 w-full h-[40px]">
+          <a class="at text-xs	 absolute bottom-[1px] left-1 " href="#">@2024 Little tools</a>
+          <a class="feedbak text-xs	 absolute bottom-[1px] right-1" href="#">Feedback</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+  <script src="dom-to-jpeg.js">
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+    integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="forEverypage.js"></script>
+  <script src="ytthumb.js">
+
+  </script>
+</body>
+
+</html>

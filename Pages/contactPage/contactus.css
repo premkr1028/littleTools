@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+main {
+  height: max-content;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.texts h1 {
+  margin-left: 5px;
+  align-self: flex-start;
+  font-family: "Anton SC", sans-serif;
+  color: black;
+  outline: none;
+  letter-spacing: 0.5px;
+  font-size: 5vmax;
+}
+
+.links h1 {
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+
+.links a {
+  font-family: "Anton SC", sans-serif;
+  color: black;
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+  font-size: 4.5vw;
+}
+
+#mainContact {
+  border-radius: 30px 30px 0 0;
+}
+
+.links {
+  overflow: hidden;
+  position: relative;
+}
+
+.spantw,
+.spanld,
+.spanig {
+  position: relative;
+  font-size: 4.5vw;
+  font-family: "Anton SC", sans-serif;
+  color: black;
+  transition: cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+.eye {
+  width: 9vw;
+  height: 15vw;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.eyeBall {
+  width: 1vw;
+  height: 1vw;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  /* transform: translateX(-200%); */
+}
+
+
+.contactArea i,
+.contactArea label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+}
+
+.contactArea i {
+  left: 4px;
+}
+
+.contactArea label {
+  font-size: 14px;
+  left: 23px;
+  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  color: gray;
+  pointer-events: none;
+  transition: top 200ms ease-in-out, left 200ms ease-in-out, font-size 200ms ease-in-out;
+  background-color: white;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  height: 50px !important;
+  padding: 0 23px;
+  border-radius: 2px;
+  border: 0.2px solid gray;
+  outline: none;
+  font-size: 14px;
+}
+
+#searchToolsinp {
+
+  position: fixed;
+  top: 15vh;
+  left: 50%;
+  transform: scale(0);
+  z-index: 15;
+  border-radius: 20px !important;
+  border: 0.5px solid gray !important;
+  outline: lightgray;
+  padding: 2vh 3vw !important;
+  height: 10vh !important;
+  width: 85vw;
+  transition: 0.3s;
+
+}
+
+.sendBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  /* border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; */
+  width: 420px;
+  left: 0;
+  height: 6px;
+  background-color: white;
+  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  color: gray;
+  transition: cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.sendBtn:active~.sendBtn::after {
+  transform: translateY(-6px);
+}
+
+.sendBtn:active {
+  transform: translateY(6px);
+}
+
+
+.button-54 {
+  align-self: start;
+  width: 420px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+.disc label {
+  top: 25px !important;
+  transform: translateY(-100%);
+  left: 3px;
+}
+
+.scDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  transition: 0.1s;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+}
+
+.scDiv:hover {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border: 1px solid darkseagreen;
+
+}
+
+input[type=text]:focus~label,
+input[type=email]:focus~label,
+input[type=text]:valid~label,
+input[type=email]:valid~label {
+  font-size: 11px;
+  top: 0px;
+  color: black;
+}
+
+textarea:focus~label,
+textarea:valid~label {
+  font-size: 10px;
+  top: 8px !important;
+  color: black;
+  left: 10px;
+}
+
+textarea {
+  height: 100px !important;
+  padding: 4px !important;
+}
+
+.errorP {
+  position: absolute;
+  left: 2px;
+  color: red;
+  font-size: 8px;
+  top: 100%;
+}
+
+.contactArea button {
+  margin-bottom: 15px;
+}
+
+
+/* CSS */
+.feedbak {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.contactArea {
+  height: max-content !important;
+}
+
+@media(max-width: 640px) {
+  .contactArea .tag h1 {
+    text-align: center;
+  }
+
+  .texts h1 {
+    font-family: 'Poppins', sans-srif;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .mainConta {
+    width: 100%;
+    height: max-content !important;
+    flex-direction: column-reverse;
+  }
+
+  .eyeAndLink {
+    width: 100%;
+    height: 40% !important;
+  }
+
+  .contactArea {
+    width: 100% !important;
+    height: max-content;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .contactArea .names {
+    flex-direction: column;
+    width: 100% !important;
+    align-items: center;
+  }
+
+  .contactArea .names .fn,
+  .contactArea .names .ln {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .email,
+  .disc {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  input[type=text],
+  input[type=email],
+  textarea {
+    width: 80% !important;
+    height: 40px !important;
+    padding: 0 23px;
+    border-radius: 2px;
+    border: 0.2px solid gray;
+    outline: none;
+    font-size: 14px;
+  }
+
+  textarea {
+    height: 100px !important;
+    padding-left: 5px !important;
+  }
+
+  .connectText {
+    text-align: center;
+  }
+
+  textarea:focus~label,
+  textarea:valid~label {
+    left: 12vw !important;
+  }
+
+  input[type=text]:focus~label,
+  input[type=email]:focus~label,
+  input[type=text]:valid~label,
+  input[type=email]:valid~label {
+    left: 16w !important;
+  }
+
+  .contactArea i {
+    left: 11vw !important;
+  }
+
+  .contactArea label {
+    left: 18vw !important;
+  }
+
+  .disc label {
+    top: 25px;
+    left: 11vw !important
+  }
+
+  .contactArea button {
+    width: 80% !important;
+    align-self: center;
+  }
+
+  .eyesArea {
+    display: none !important;
+  }
+
+  .eyeAndLink {
+    margin-top: 15px;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #searchToolsinp {
+    height: 40px !important;
+  }
+}
+
+
+
+
+
+.text {
+  z-index: 9999;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  animation: textCursor 8s linear infinite;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+.letters {
+  font-weight: bolder;
+  position: absolute;
+  transform-origin: 0vw 7.6vw;
+  color: #000;
+  font-size: 1.2vw;
+}
+
+#text {
+  pointer-events: none;
+  z-index: 10;
+  padding-top: 0.4vw;
+  padding-left: 0.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  animation: textCursor 8s linear infinite;
+  ;
+}
+
+@keyframes textCursor {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.dot {
+  font-weight: bold;
+  position: absolute;
+  font-size: 1.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.eyesDiv {
+  display: flex;
+  justify-content: center;
+  gap: 0.6vw;
+  align-items: center;
+  padding: 1.5vw;
+}
+
+.eyes {
+  width: 5.5vw;
+  background-color: white;
+  border: 0.8px solid black;
+  border-radius: 50%;
+  height: 7vw;
+  position: relative;
+}
+
+.pupils {
+  background-color: #000;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-radius: 50%;
+  position: absolute;
+  right: 9%;
+  top: 58%;
+}
+
+.eyesDiv:hover {
+  .circ {
+    /* z-index: -1; */
+    width: 17vw;
+    height: 17vw;
+  }
+
+}
+
+.eyesDiv:hover~#text {
+  animation: textCursor 8s reverse infinite;
+
+}

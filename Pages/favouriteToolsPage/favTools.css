@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+main {
+  min-height: 100vh;
+}
+
+main h1 {
+  text-align: center;
+  font-size: 4vmax;
+  padding: 1vh 3vw;
+}
+
+/* .favToolsCont{
+  display: inline-grid;
+} */
+
+
+.toolDiv {
+  width: 28vw;
+  height: 22vw;
+  border-radius: 1vw;
+  overflow: hidden;
+}
+
+.toolDiv .tool {
+  height: 100%;
+  object-fit: cover;
+}
+
+summary {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+details {
+  width: 3vw;
+  height: 3vw;
+  position: relative;
+}
+
+details ul {
+  width: 12vw;
+  border: 1px solid gray;
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+  color: #454545;
+  bottom: 100%;
+  right: 0%;
+  gap: 0.6vh;
+  padding: 0.5vw;
+}
+
+details ul li {
+  padding: 2vh 2vw;
+  width: 100%;
+  font-size: 1vw;
+  gap: 1vw;
+  border-radius: 5px;
+  text-wrap: nowrap;
+  transition: 0.2s;
+}
+
+details ul li:hover {
+  opacity: 1;
+  background-color: #F5F5F5;
+}
+
+.name {
+  white-space: nowrap;
+  text-wrap: wrap;
+  overflow: hidden;
+}
+
+#notFavToolAddText {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.popUpForAdd {
+  transition: 0.2s;
+  transform: translateX(-120%);
+
+  /* animation: shake 2s ease-in-out; */
+}
+
+.ppAnimation {
+  animation: shake 200ms 2 linear;
+  -moz-animation: shake 200ms 2 linear;
+  -webkit-animation: shake 200ms 2 linear;
+  -o-animation: shake 200ms 2 linear;
+}
+
+.prBar {
+  /* content: ''; */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: gray;
+  z-index: 60;
+  /* transform: translateX(-100%); */
+  /* animation: popUp 2s ease-in-out; */
+}
+
+.popLne {
+
+  animation: popUp 2s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(3px, 0);
+  }
+
+  50% {
+    transform: translate(-3px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@-moz-keyframes shake {
+  0% {
+    -moz-transform: translate(3px, 0);
+  }
+
+  50% {
+    -moz-transform: translate(-3px, 0);
+  }
+
+  100% {
+    -moz-transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(3px, 0);
+  }
+
+  50% {
+    -webkit-transform: translate(-3px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+  }
+}
+
+@-ms-keyframes shake {
+  0% {
+    -ms-transform: translate(3px, 0);
+  }
+
+  50% {
+    -ms-transform: translate(-3px, 0);
+  }
+
+  100% {
+    -ms-transform: translate(0, 0);
+  }
+}
+
+@-o-keyframes shake {
+  0% {
+    -o-transform: translate(3px, 0);
+  }
+
+  50% {
+    -o-transform: translate(-3px, 0);
+  }
+
+  100% {
+    -o-transform: translate(0, 0);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 640px) {
+
+  .toolDiv {
+    width: 90% !important;
+    height: 35vh;
+  }
+
+  .views details ul {
+    width: max-content;
+    height: max-content
+  }
+
+  details ul li {
+    font-size: 3vw;
+    text-wrap: wrap;
+    padding: 5px 2vw;
+  }
+}
