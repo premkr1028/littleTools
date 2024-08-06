@@ -400,3 +400,24 @@ transition: 0.3s;
     display: none;
   }
 }
+
+.resSearch{
+  position: fixed;
+  top: 15vh !important;
+  left: 50% !important;
+  /* transform: scale(0) !important; */
+  z-index: 15 !important;
+  border-radius: 20px !important;
+  border: 0.5px solid gray !important;
+  outline: lightgray !important;
+  padding: 2vh 3vw !important;
+  height: 10vh !important;
+  width: 85vw !important;
+  transition: 0.3s;
+}
+
+@media (max-width:640px){
+  .resSearch{
+    height: 40px !important;
+  }
+}

@@ -42,13 +42,7 @@ let searchFixBtnIco = document.querySelector('.searchFixBtnIco')
 let menuBtnChange = false
 searchFixBtnIco.onclick = () => {
     searchAaja()
-    if (!menuBtnChange) {
-        menuBtnChange = true
-        searchFixBtnIco.innerHTML = `<i class="fa-solid fa-xmark"></i>`
-    } else if (menuBtnChange) {
-        menuBtnChange = false
-        searchFixBtnIco.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i>`
-    }
+ 
 }
 let toolsDiv = document.querySelector('.toolsDiv')
 
@@ -259,6 +253,15 @@ let searchBar = document.querySelector('.searchBar')
 let searchBacklay = document.querySelector('.searchBacklay')
 let searchIconDiv = document.querySelector('.searchIconDiv')
 function searchAaja() {
+     
+    if (!menuBtnChange) {
+
+        menuBtnChange = true
+        searchFixBtnIco.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+    } else if (menuBtnChange) {
+        menuBtnChange = false
+        searchFixBtnIco.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i>`
+    }
     console.log('megha')
     searchOpen = !searchOpen
     if (searchOpen === true) {

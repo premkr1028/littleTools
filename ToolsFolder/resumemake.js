@@ -800,3 +800,26 @@ function clearSumm(){
   let textArea = document.querySelector('textarea')
   textArea.value = ''
 }
+
+
+function clearProfessionalExp(){
+  let allInputs = document.querySelectorAll('.peInputs')
+
+  allInputs.forEach(input =>{
+    input.value = ''
+  })
+}
+
+function clearEdu(){
+  let allInputs = document.querySelectorAll('.eduInputs')
+  allInputs.forEach(input =>{
+    input.value = ''
+  })
+}
+
+function clearSkills(){
+  let allInputs = document.querySelectorAll('.skillInputs')
+  allInputs.forEach(input =>{
+    input.value = ''
+  })
+}

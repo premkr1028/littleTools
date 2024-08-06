@@ -207,6 +207,15 @@ let searchOpen = false
 let searchBar = document.querySelector('.searchBar')
 let searchBacklay = document.querySelector('.searchBacklay')
 function searchAaja(){
+
+    if (!menuBtnChange) {
+
+        menuBtnChange = true
+        searchFixBtnIco.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+    } else if (menuBtnChange) {
+        menuBtnChange = false
+        searchFixBtnIco.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i>`
+    }
     searchOpen = !searchOpen
    if(searchOpen === true){
        searchIconDiv.innerHTML =  `
@@ -307,13 +316,13 @@ let searchFixBtnIco = document.querySelector('.searchFixBtnIco')
 let menuBtnChange = false
  searchFixBtnIco.onclick = ()=>{
      searchAaja()
-     if(!menuBtnChange){
-         menuBtnChange = true
-         searchFixBtnIco.innerHTML = `<i class="fa-solid fa-xmark"></i>`
-     } else if(menuBtnChange){
-         menuBtnChange = false
-        searchFixBtnIco.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i>`
-     }
+     // if(!menuBtnChange){
+     //     menuBtnChange = true
+     //     searchFixBtnIco.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+     // } else if(menuBtnChange){
+     //     menuBtnChange = false
+     //    searchFixBtnIco.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i>`
+     // }
  }
 
 
@@ -330,8 +339,8 @@ function openGmailCompose(email) {
     feedBack.onclick = () => openGmailCompose('premcodeprojects2810@gmail.com');
 
 let igGram = document.querySelectorAll('.fa-instagram')
-console.log(igGram)
+// console.log(igGram)
 igGram.forEach(ig => {
     ig.parentElement.setAttribute('href', 'https://www.instagram.com/premkrbalmiki/')
-    console.log(ig.parentElement)
+    // console.log(ig.parentElement)
 })
