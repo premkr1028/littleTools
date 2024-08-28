@@ -458,7 +458,11 @@ let add_skillBtn = document.querySelector('.add-skill')
 let skill_dataDiv = document.querySelector('.skill-data')
 
 add_skillBtn.onclick = () => {
-  skill_dataDiv.innerHTML += `
+
+  let skillInputsAll = document.querySelectorAll('.skillInputs')
+  // let skillArr = []
+  skillInputsAll.forEach(inpus => inpus.value = "")
+    skill_dataDiv.innerHTML += `
   
   <div class="skillEntries w-full flex flex-col mt-[12px] gap-[8px] p-[10px] border-[1px] border-gray-300 rounded-md relative">
   <span class="absolute deleteSkill right-0 top-0 ">
@@ -735,6 +739,7 @@ function addSkillsFunc() {
 
   let skillInputsAll = document.querySelectorAll('.skillInputs')
   let skillArr = []
+  // skillInputsAll.forEach(inpus => inpus.value = "")
   skillInputsAll.forEach((inputs, ind) => {
     skillArr.push(inputs.value)
   })
@@ -742,19 +747,35 @@ function addSkillsFunc() {
 
   let upper = `  <h1 style="color: var(--color);" class="text-center text-xl font-bold">Skills</h1>
               <div style="background-color: var(--color);" class="prSkillLine w-full h-[3px] mt-[3px] mb-[5px]"></div>
-              <ul class="prSkillDetUl grid grid-cols-3 gap-[15px] text-md ">
-
-              </ul>
+              
               `
 
   prSkillDet.innerHTML = upper
-  let prSkillDetUl = document.querySelector('.prSkillDetUl')
+  // prSkillDet.innerHTML += `<ul id="prrr" class="prSkillDetUl grid grid-cols-3 gap-[15px] text-md ">
+
+  // </ul>`
+ 
+  let ul = document.createElement("ul")
+  ul.classList.add("forSkills")
+  prSkillDet.append(ul)
+  // let prSkillDetUl = document.querySelector('#prrr')
   skillArr.map((skill, index) => {
     console.log(skill, index)
-    prSkillDetUl.innerHTML += `<li class ="flex justify-center items-center gap-[4px]" id="${index}"><span>&FilledSmallSquare;</span><h2>${skill}</h2></li>`
+    let li = document.createElement("li")
+    li.classList.add("liSkill")
+    li.append(skill)
+    // prSkillDet.innerHTML += `<li class ="flex justify-center items-center gap-[4px]" id="${index}"><span>&FilledSmallSquare;</span><h2>${skill}</h2></li>`
+    // let forSkill = document.querySelector(".forskill")
+    // prSkillDet.innerHTML = `<li class="w-[max-content] mx-[10px] block">${skill}</li>`
+    let dat = skill
+      ul.append(li)
   })
-}
+  // if(prSkillDetUl){prSkillDet =  upper+prSkillDetUl}
 
+}
+document.querySelector("#fifthSave").addEventListener("click",()=>{
+  
+})
 
 document.addEventListener('click', (e) => {
   // console.log(e.target.children[0].innerText)
