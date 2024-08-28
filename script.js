@@ -257,6 +257,7 @@ function searchAaja() {
     if (!menuBtnChange) {
 
         menuBtnChange = true
+        searchBar.focus()
         searchFixBtnIco.innerHTML = `<i class="fa-solid fa-xmark"></i>`
     } else if (menuBtnChange) {
         menuBtnChange = false
@@ -265,7 +266,8 @@ function searchAaja() {
     console.log('megha')
     searchOpen = !searchOpen
     if (searchOpen === true) {
-        searchIconDiv.innerHTML = `
+ searchBar.value = ""
+     searchIconDiv.innerHTML = `
        <img class="w-[100%]" src="https://icons.veryicon.com/png/o/miscellaneous/medium-thin-linear-icon/cross-23.png"/>
        `
         searchMeJaa.style.display = 'flex'
@@ -284,7 +286,8 @@ function searchAaja() {
         searchBacklay.style.display = 'none'
         searchMeJaa.style.display = 'none'
         searchList.style.top = 15 + 'vh'
-        searchFixBtn.innerHTML = 'search tools'
+searchList.style.display= "none"
+    searchFixBtn.innerHTML = 'search tools'
         searchBar.style.transform = ' scale(0)';
     }
 
@@ -312,7 +315,7 @@ function searchChalaJa() {
 
 }
 function searchHist() {
-    let filterdList = toolsArr.filter(tool => tool.name.toLowerCase().startsWith(searchBar.value))
+    let filterdList = toolsArr.filter(tool => tool.name.toLowerCase().startsWith(searchBar.value.toLowerCase()))
     console.log(filterdList)
 
     searchList.innerHTML = ''
@@ -326,7 +329,7 @@ function searchHist() {
                        </path>
                      </svg><img class="listScIcon" />
                 </div> 
-             <a class="searchText text-[2vw]"
+             <a class="searchText text-[2vw] w-full"
              href="${toolsName.path}">${toolsName.name}</a>
             </div>`
         searchList.innerHTML += clutter
@@ -585,4 +588,13 @@ function goTOBRowsw(){
     let a =  document.createElement('a')
     a.href = 'Pages/allToolsPage/allTools.html'
     a.click()
+}
+let feedBack = document.querySelector('.feedbak')
+// feedBack.setAttribute('href' , '')
+feedBack.onclick = () =>{
+    openGmailCompose('premcodeprojects2810@gmail.com')
+}
+function openGmailCompose(email) {
+  const mailtoLink = `mailto:${email}?subject=`;
+  window.location.href = mailtoLink;
 }

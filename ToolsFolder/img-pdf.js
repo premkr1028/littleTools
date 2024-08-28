@@ -137,6 +137,8 @@ const pdfDownloadLink = document.getElementById('pdfDownloadLink');
 
 // Function to handle the conversion process
 const convertToPdf = (dBTn) => {
+
+
   const doc = new jsPDF();
  
   let imagesProcessed = 0;
@@ -184,10 +186,13 @@ function downOption() {
 }
 convertButton.addEventListener('click', () => {
   if(convertButton.innerText == 'Check Images?'){
+    {document.querySelector("#up").style.display = " flex"}
     imgContDiv.style.display = 'grid'
     convertButton.innerHTML = 'Convert to PDF'
     renderImages()
     return
+  }else{
+    {document.querySelector("#up").style.display = " none"}
   }
  
   convertButton.innerHTML = 'Converting...'

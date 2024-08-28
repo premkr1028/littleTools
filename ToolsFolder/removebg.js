@@ -80,5 +80,5 @@ function downn() {
     an.download = 'no-bg.png'
     document.querySelector('.rbgConvCont').appendChild(an)
     an.click()
-
+an.remove()
 }
